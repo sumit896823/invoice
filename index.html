@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function sum()
+            {
+                item=parseFloat (document.getElementById("item").value);
+                rate=parseFloat(document.getElementById("rate").value);
+                total=item*rate;
+                document.getElementById("total").value=total;
+
+
+            }
+            function sum1()
+            {
+                total=parseFloat(document.getElementById("total").value);
+                discount=parseFloat(document.getElementById("discount").value);
+                discountValue=total*discount/100;
+                netTotal=total-discountValue;
+                document.getElementById("discountValue").value=discountValue;
+                document.getElementById("netTotal").value=netTotal;
+            }
+            function sum2()
+            {
+                netTotal=parseFloat(document.getElementById("netTotal").value);
+                gst=parseFloat(document.getElementById("gst").value);
+                gstValue=netTotal*gst/100;
+                grandTotal=gstValue+netTotal;
+                document.getElementById("gstValue").value=gstValue;
+                document.getElementById("grandTotal").value=grandTotal;
+            }
+
+        </script>
+        
+        <style>
+            body{background-image: url(image/1.jpg);
+                background-attachment: fixed;
+
+            }
+            .css0{text-decoration: 6px underline  black;
+                text-align: center;
+                font-size: 65px;
+                color: rgba(255, 255, 255, 0.703);
+                font-family: Comic Sans MS; 
+                font-weight: 800;
+                text-shadow: 2px 2px 12px rgb(187, 62, 62);
+                height: 120px;  
+                
+
+            }
+            .css{border: 1px solid none;
+                height: 400px;
+                width: 800px;
+                margin: 0 auto;
+                background:rgba(0, 0, 0, 0.566);
+                background-size: 100% 100%;
+                border-radius: 30px;
+                box-shadow: 0px 0px 20px 0px rgb(0, 0, 0), 0px 0px 10px 0px ;
+                animation: sum ;
+                animation-duration: 2s;
+                animation-direction: alternate-reverse;
+                animation-iteration-count: infinite;
+            }
+            @keyframes sum{
+
+                0%{transform: translateY(0px);}
+                100%{transform: translateY(25px);}
+            }
+            .css1{border: 1px solid none;
+                height: 400px;
+                width: 800px;
+                background:rgba(0, 0, 0, 0.406);
+                border-radius: 30px;
+            }
+            .css1a{border: 1px solid none;
+                height: 100px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                font-family: forte;
+                font-size: 24px;
+                color: rgba(255, 255, 255, 0.633);
+                margin-top: 35px;
+            }
+            .css2{
+                
+                color: rgba(255, 255, 255, 0.642);
+                font-size: 32px;
+                
+                
+                
+            }
+            .css2a input{background-color: rgba(0, 0, 0, 0.596);
+                    height: 40px;
+                    width: 300px;
+                    color: rgba(255, 255, 255, 0.637);
+                    font-size: 23px;
+                    font-family: forte;
+            }
+            .css3{border: 1px solid none;
+            height: 100px;
+                margin-top: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        }
+        .css3 input{height: 50px;
+                    width: 250px;
+                    border-radius: 30px;
+                    background:rgba(0, 0, 0, 0.566);
+                    background-size: 100% 100%;
+                    color: rgba(255, 255, 255, 0.87);
+                    font-family: forte;
+                    font-size: 28px;
+                    word-spacing: 5px;
+                    box-shadow: 0px 0px 8px 0px black,0px 0px 14px 0px black;
+                    transition: 1s;
+                    text-shadow: 1px 1px 30px white ; 
+                    animation: sum;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate; 
+                    animation-delay: 1s;    
+        }
+        .css3 input:hover{
+            background:black;
+            color: rgba(255, 255, 255, 0.633);
+            box-shadow: 0px 0px 8px 0px black,0px 0px 14px 0px red;
+            text-shadow: 1px 1px 30px red ;     
+        }
+        .css4{border: 1px solid none;
+                height: 270px;
+                width: 800px;
+                margin: 0 auto;
+                background:rgba(0, 0, 0, 0.566);
+                background-size: 100% 100%;
+                border-radius: 30px;
+                box-shadow: 0px 0px 20px 0px, 0px 0px 10px 0px black;
+                animation: sum ;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+            @keyframes sum{
+
+                0%{transform: translateY(0px);}
+                100%{transform: translateY(25px);}
+            }
+            .css4a{border: 1px solid none;
+                height: 270px;
+                width: 800px;
+                background:rgba(0, 0, 0, 0.406);
+                border-radius: 30px;
+            }
+            .css1a{border: 1px solid none;
+                height: 100px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                font-family: forte;
+                font-size: 24px;
+                color: rgba(255, 255, 255, 0.633);
+                margin-top: 35px;
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <div class="css0">INVOICE</div>
+        <div class="css">
+            <div class="css1">
+                <div class="css1a">
+                    <div class="css2">Name</div>=
+                    <div class="css2a"><input type="text"id="name"></div>
+                 </div>
+                 <div class="css1a">
+                    <div class="css2">Item</div>=
+                    <div class="css2a"><input type="text"id="item"></div>
+                 </div>
+                 <div class="css1a">
+                    <div class="css2">Rate</div>=
+                    <div class="css2a"><input type="text"id="rate"></div>
+                 </div>
+            </div>
+        </div>
+
+        <div class="css3">
+            <input type="button"value="Submit"onclick="sum()">
+        </div>
+
+        <div class="css4">
+            <div class="css4a">
+                <div class="css1a">
+                    <div class="css2">Total</div>=
+                    <div class="css2a"><input type="text"id="total"></div>
+                 </div>
+                 <div class="css1a">
+                    <div class="css2">Discount</div>=
+                    <div class="css2a"><input type="text"id="discount"></div>
+                 </div>
+            </div>
+        </div>
+
+            <div class="css3">
+                <input type="button"value="Submit"onclick="sum1()">
+            </div>
+
+            <div class="css">
+                <div class="css1">
+                    <div class="css1a">
+                        <div class="css2">Discount Value</div>=
+                        <div class="css2a"><input type="text"id="discountValue"></div>
+                     </div>
+                     <div class="css1a">
+                        <div class="css2">Net Total</div>=
+                        <div class="css2a"><input type="text"id="netTotal"></div>
+                     </div>
+                     <div class="css1a">
+                        <div class="css2">Gst</div>=
+                        <div class="css2a"><input type="text"id="gst"></div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="css3">
+                <input type="button"value="Submit"onclick="sum2()">
+            </div>
+
+
+            <div class="css4">
+                <div class="css4a">
+                    <div class="css1a">
+                        <div class="css2">GstValue</div>=
+                        <div class="css2a"><input type="text"id="gstValue"></div>
+                     </div>
+                     <div class="css1a">
+                        <div class="css2">Grand Total</div>=
+                        <div class="css2a"><input type="text"id="grandTotal"></div>
+                     </div>
+                </div>
+            </div>
+    </body>
+</html>
